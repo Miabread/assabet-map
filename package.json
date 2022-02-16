@@ -1,5 +1,5 @@
 {
-    "name": "sw-test",
+    "name": "map-app",
     "private": true,
     "scripts": {
         "dev": "next dev",

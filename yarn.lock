@@ -3821,6 +3821,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"map-app@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "map-app@workspace:."
+  dependencies:
+    "@types/node": 17.0.18
+    "@types/react": 17.0.39
+    eslint: 8.9.0
+    eslint-config-next: 12.0.10
+    eslint-config-prettier: ^8.3.0
+    next: 12.0.10
+    next-pwa: ^5.4.4
+    react: 17.0.2
+    react-dom: 17.0.2
+    typescript: 4.5.5
+  languageName: unknown
+  linkType: soft
+
 "merge-stream@npm:^2.0.0":
   version: 2.0.0
   resolution: "merge-stream@npm:2.0.0"
@@ -5116,23 +5133,6 @@ __metadata:
   checksum: 53b1e247e68e05db7b3808b99b892bd36fb096e6fba213a06da7fab22045e97597db425c724f2bbd6c99a3c295e1e73f3e4de78592289f38431049e1277ca0ae
   languageName: node
   linkType: hard
-
-"sw-test@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "sw-test@workspace:."
-  dependencies:
-    "@types/node": 17.0.18
-    "@types/react": 17.0.39
-    eslint: 8.9.0
-    eslint-config-next: 12.0.10
-    eslint-config-prettier: ^8.3.0
-    next: 12.0.10
-    next-pwa: ^5.4.4
-    react: 17.0.2
-    react-dom: 17.0.2
-    typescript: 4.5.5
-  languageName: unknown
-  linkType: soft
 
 "tar@npm:^6.0.2, tar@npm:^6.1.2":
   version: 6.1.11
