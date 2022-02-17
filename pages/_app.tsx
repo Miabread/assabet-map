@@ -7,6 +7,13 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Head>
                 <link rel="manifest" href="/manifest.webmanifest" />
             </Head>
+            <style jsx global>{`
+                html,
+                body {
+                    margin: 0;
+                    overflow: hidden;
+                }
+            `}</style>
             <Component {...pageProps} />{' '}
         </>
     );
