@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import '../styles/style.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -7,13 +8,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Head>
                 <link rel="manifest" href="/manifest.webmanifest" />
             </Head>
-            <style jsx global>{`
-                html,
-                body {
-                    margin: 0;
-                    overflow: hidden;
-                }
-            `}</style>
             <Component {...pageProps} />{' '}
         </>
     );
