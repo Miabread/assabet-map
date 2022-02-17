@@ -1906,6 +1906,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"assabet-map@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "assabet-map@workspace:."
+  dependencies:
+    "@types/node": 17.0.18
+    "@types/react": 17.0.39
+    eslint: 8.9.0
+    eslint-config-next: 12.0.10
+    eslint-config-prettier: ^8.3.0
+    next: 12.0.10
+    next-pwa: ^5.4.4
+    react: 17.0.2
+    react-dom: 17.0.2
+    typescript: 4.5.5
+  languageName: unknown
+  linkType: soft
+
 "ast-types-flow@npm:^0.0.7":
   version: 0.0.7
   resolution: "ast-types-flow@npm:0.0.7"
@@ -3820,23 +3837,6 @@ __metadata:
   checksum: 0eb371c85fdd0b1584fcfdf3dc3c62395761b3c14658be02620c310305a9a7ecf1617a5e6fb30c1d081c5c8aaf177fa133ee225024313afabb7aa6a10f1e3d04
   languageName: node
   linkType: hard
-
-"map-app@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "map-app@workspace:."
-  dependencies:
-    "@types/node": 17.0.18
-    "@types/react": 17.0.39
-    eslint: 8.9.0
-    eslint-config-next: 12.0.10
-    eslint-config-prettier: ^8.3.0
-    next: 12.0.10
-    next-pwa: ^5.4.4
-    react: 17.0.2
-    react-dom: 17.0.2
-    typescript: 4.5.5
-  languageName: unknown
-  linkType: soft
 
 "merge-stream@npm:^2.0.0":
   version: 2.0.0
