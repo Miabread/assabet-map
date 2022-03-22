@@ -1,20 +1,18 @@
 import { Button, Drawer, Group } from '@mantine/core';
 import type { NextPage } from 'next';
-import Image from 'next/image';
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
+
+const Map = dynamic(async () => (await import('../components/Map')).Map, {
+    ssr: false,
+});
 
 const Home: NextPage = () => {
     const [opened, setOpened] = useState(false);
 
     return (
         <div>
-            {/* <Image
-                src="/floor1.jpg"
-                alt=""
-                width={2200}
-                height={1700}
-                className="w-screen"
-            /> */}
+            <Map />
             <Group position="center">
                 <Button onClick={() => setOpened(true)}>Open Menu</Button>
             </Group>
