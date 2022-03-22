@@ -1,4 +1,4 @@
-import { Affix, Button, Drawer, Group, TextInput } from '@mantine/core';
+import { Affix, Autocomplete, Drawer } from '@mantine/core';
 import type { NextPage } from 'next';
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
@@ -7,17 +7,27 @@ const Map = dynamic(async () => (await import('../components/Map')).Map, {
     ssr: false,
 });
 
+const data = ['CPWD', 'Electrical Wiring', 'Culinary'];
+
 const Home: NextPage = () => {
     const [opened, setOpened] = useState(false);
+    const [selected, setSelected] = useState('');
 
     return (
         <div>
             <Map />
             <Affix position={{ top: 0, right: 0 }}>
-                <TextInput
+                <Autocomplete
                     placeholder="Search"
-                    onClick={() => setOpened(true)}
                     style={{ width: '100vw' }}
+                    data={data}
+                    value={selected}
+                    onChange={(value) => {
+                        setSelected(value);
+                        if (data.includes(value)) {
+                            setOpened(true);
+                        }
+                    }}
                 />
             </Affix>
             <Drawer
@@ -26,10 +36,7 @@ const Home: NextPage = () => {
                 position="bottom"
                 size="75%"
             >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia
-                deserunt earum odit ratione doloremque enim, omnis aliquid vero
-                explicabo voluptatum, ad delectus, totam voluptas repellat. Sed
-                ducimus enim incidunt rerum?
+                {selected}
             </Drawer>
         </div>
     );
