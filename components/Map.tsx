@@ -11,6 +11,7 @@ export const Map: FC = () => {
             minZoom={-2}
             maxZoom={1}
             zoomControl={false}
+            attributionControl={false}
             style={{
                 height: '100vh',
                 zIndex: 1,
