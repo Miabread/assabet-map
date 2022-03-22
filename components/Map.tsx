@@ -6,7 +6,7 @@ export const Map: FC = () => {
     return (
         <MapContainer
             crs={CRS.Simple}
-            center={[2200 / 2, 1700 / 2]}
+            center={[1700 / 2, 2200 / 2]}
             zoom={0}
             minZoom={-2}
             maxZoom={1}
@@ -18,14 +18,14 @@ export const Map: FC = () => {
             }}
             maxBounds={[
                 [0, 0],
-                [2200, 1700],
+                [1700, 2200],
             ]}
         >
             <ImageOverlay
                 url="floor1.jpg"
                 bounds={[
                     [0, 0],
-                    [2200, 1700],
+                    [1700, 2200],
                 ]}
             />
         </MapContainer>
