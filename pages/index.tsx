@@ -1,4 +1,4 @@
-import { Button, Drawer, Group } from '@mantine/core';
+import { Affix, Button, Drawer, Group, TextInput } from '@mantine/core';
 import type { NextPage } from 'next';
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
@@ -13,9 +13,15 @@ const Home: NextPage = () => {
     return (
         <div>
             <Map />
-            <Group position="center">
+            <Affix position={{ top: 20, right: 40 }}>
+                <TextInput
+                    placeholder="Search"
+                    onClick={() => setOpened(true)}
+                />
+            </Affix>
+            <Affix position={{ bottom: 20, right: 40 }}>
                 <Button onClick={() => setOpened(true)}>Open Menu</Button>
-            </Group>
+            </Affix>
             <Drawer
                 opened={opened}
                 onClose={() => setOpened(false)}

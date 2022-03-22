@@ -10,7 +10,11 @@ export const Map: FC = () => {
             zoom={0}
             minZoom={-2}
             maxZoom={1}
-            style={{ height: '100vh' }}
+            zoomControl={false}
+            style={{
+                height: '100vh',
+                zIndex: 1,
+            }}
             maxBounds={[
                 [0, 0],
                 [2200, 1700],
