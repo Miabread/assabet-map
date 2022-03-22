@@ -13,21 +13,24 @@ const Home: NextPage = () => {
     return (
         <div>
             <Map />
-            <Affix position={{ top: 20, right: 40 }}>
+            <Affix position={{ top: 0, right: 0 }}>
                 <TextInput
                     placeholder="Search"
                     onClick={() => setOpened(true)}
+                    style={{ width: '100vw' }}
                 />
-            </Affix>
-            <Affix position={{ bottom: 20, right: 40 }}>
-                <Button onClick={() => setOpened(true)}>Open Menu</Button>
             </Affix>
             <Drawer
                 opened={opened}
                 onClose={() => setOpened(false)}
                 position="bottom"
                 size="75%"
-            ></Drawer>
+            >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia
+                deserunt earum odit ratione doloremque enim, omnis aliquid vero
+                explicabo voluptatum, ad delectus, totam voluptas repellat. Sed
+                ducimus enim incidunt rerum?
+            </Drawer>
         </div>
     );
 };
