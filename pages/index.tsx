@@ -1,4 +1,4 @@
-import { Affix, Autocomplete, Drawer } from '@mantine/core';
+import { Affix, Autocomplete, Drawer, Group, Paper, Tabs } from '@mantine/core';
 import type { NextPage } from 'next';
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
@@ -29,6 +29,16 @@ const Home: NextPage = () => {
                         }
                     }}
                 />
+            </Affix>
+            <Affix position={{ bottom: 0, right: 0 }}>
+                <Tabs
+                    style={{ width: '100vw' }}
+                    grow
+                    styles={{ root: { backgroundColor: 'gray' } }}
+                >
+                    <Tabs.Tab label="Floor 1" />
+                    <Tabs.Tab label="Floor 2 & 3" />
+                </Tabs>
             </Affix>
             <Drawer
                 opened={opened}
