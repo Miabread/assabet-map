@@ -51,6 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:17.0.2"],
             ["react-leaflet", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:3.2.5"],
             ["styled-jsx", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:5.0.0"],
+            ["tabler-icons-react", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:1.40.0"],
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
           ],
           "linkType": "SOFT",
@@ -3709,6 +3710,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:17.0.2"],
             ["react-leaflet", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:3.2.5"],
             ["styled-jsx", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:5.0.0"],
+            ["tabler-icons-react", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:1.40.0"],
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
           ],
           "linkType": "SOFT",
@@ -7986,6 +7988,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/supports-preserve-symlinks-flag-npm-1.0.0-f17c4d0028-53b1e247e6.zip/node_modules/supports-preserve-symlinks-flag/",
           "packageDependencies": [
             ["supports-preserve-symlinks-flag", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["tabler-icons-react", [
+        ["npm:1.40.0", {
+          "packageLocation": "./.yarn/cache/tabler-icons-react-npm-1.40.0-cd1b622a02-9c178b90ae.zip/node_modules/tabler-icons-react/",
+          "packageDependencies": [
+            ["tabler-icons-react", "npm:1.40.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:1.40.0", {
+          "packageLocation": "./.yarn/__virtual__/tabler-icons-react-virtual-e5095d4b10/0/cache/tabler-icons-react-npm-1.40.0-cd1b622a02-9c178b90ae.zip/node_modules/tabler-icons-react/",
+          "packageDependencies": [
+            ["tabler-icons-react", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:1.40.0"],
+            ["@types/react", "npm:17.0.39"],
+            ["react", "npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@types/react",
+            "react"
           ],
           "linkType": "HARD",
         }]

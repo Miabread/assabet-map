@@ -1,6 +1,6 @@
 {
     "extends": ["next/core-web-vitals", "prettier"],
     "rules": {
-        "curly": "error"
+        "curly": ["error", "multi-line"]
     }
 }

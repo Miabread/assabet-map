@@ -1,6 +1,6 @@
 export const floors = [
-    { label: 'Floor 1', value: '1' },
-    { label: 'Floor 2 & 3', value: '2' },
+    { label: 'Floor 1', value: 'floor1.jpg' },
+    { label: 'Floor 2 & 3', value: 'floor2.jpg' },
 ];
 
 export const places = [
