@@ -1,34 +1,23 @@
-import { Affix, Autocomplete, Drawer, ScrollArea, Tabs } from '@mantine/core';
+import {
+    Affix,
+    Autocomplete,
+    Drawer,
+    ScrollArea,
+    SegmentedControl,
+} from '@mantine/core';
 import type { NextPage } from 'next';
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
+import { floors, places } from '../src/data';
 
-const Map = dynamic(async () => (await import('../components/Map')).Map, {
+const Map = dynamic(async () => (await import('../src/components/Map')).Map, {
     ssr: false,
 });
 
-const places = [
-    'Advanced Manufacturing',
-    'Auto Collision',
-    'Auto Tech',
-    'Biotech',
-    'Business Tech',
-    'CPWD',
-    'Carpentry',
-    'Cosmetology',
-    'Culinary',
-    'Design and Visual',
-    'Electrical',
-    'HVAC',
-    'Health Tech',
-    'Metal Fabrication',
-    'Painting and Design',
-    'Plumbing',
-];
-
 const Home: NextPage = () => {
-    const [opened, setOpened] = useState(false);
-    const [selected, setSelected] = useState('');
+    const [drawerOpened, setDrawOpened] = useState(false);
+    const [searchInput, setSearchInput] = useState('');
+    const [selectedFloor, setSelectedFloor] = useState(floors[0].value);
 
     return (
         <div>
@@ -37,30 +26,31 @@ const Home: NextPage = () => {
                 <Autocomplete
                     placeholder="Search"
                     data={places}
-                    value={selected}
+                    value={searchInput}
                     onChange={(value) => {
-                        setSelected(value);
+                        setSearchInput(value);
                         if (places.includes(value)) {
-                            setOpened(true);
+                            setDrawOpened(true);
                         }
                     }}
                 />
             </Affix>
             <Affix position={{ bottom: 0, right: 0 }} style={{ width: '100%' }}>
-                <Tabs grow styles={{ root: { backgroundColor: 'gray' } }}>
-                    <Tabs.Tab label="Floor 1" />
-                    <Tabs.Tab label="Floor 2 & 3" />
-                </Tabs>
+                <SegmentedControl
+                    value={selectedFloor}
+                    onChange={setSelectedFloor}
+                    data={floors}
+                />
             </Affix>
             <Drawer
-                opened={opened}
-                onClose={() => setOpened(false)}
+                opened={drawerOpened}
+                onClose={() => setDrawOpened(false)}
                 position="bottom"
                 size="75%"
                 withCloseButton={false}
             >
                 <ScrollArea type="always" style={{ height: '100%' }} p="lg">
-                    {selected} Lorem ipsum dolor sit, amet consectetur
+                    {searchInput} Lorem ipsum dolor sit, amet consectetur
                     adipisicing elit. Voluptatibus beatae enim aliquam? Hic esse
                     velit blanditiis aliquam est tenetur. Ex fugiat perferendis
                     quod blanditiis ea corporis voluptate, dolorum eaque veniam
