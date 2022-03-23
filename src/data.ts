@@ -1,6 +1,6 @@
 export const floors = [
-    { label: 'Floor 1', value: 'floor1.jpg' },
-    { label: 'Floor 2 & 3', value: 'floor2.jpg' },
+    { label: 'Floor 1', value: 'floor1.png' },
+    { label: 'Floor 2 & 3', value: 'floor2.png' },
 ];
 
 const placeGroups = ['Shops', 'Facility'];

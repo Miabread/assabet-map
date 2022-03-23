@@ -22,7 +22,7 @@ const Home: NextPage = () => {
 
     return (
         <div>
-            <Map />
+            <Map url={selectedFloor} />
             <Affix position={{ top: 0, right: 0 }} style={{ width: '100%' }}>
                 <Select
                     icon={<Search size={14} />}

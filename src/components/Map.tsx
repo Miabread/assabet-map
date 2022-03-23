@@ -2,7 +2,11 @@ import { CRS } from 'leaflet';
 import { FC } from 'react';
 import { ImageOverlay, MapContainer } from 'react-leaflet';
 
-export const Map: FC = () => {
+export interface Props {
+    url: string;
+}
+
+export const Map: FC<Props> = ({ url }) => {
     return (
         <MapContainer
             crs={CRS.Simple}
@@ -22,7 +26,7 @@ export const Map: FC = () => {
             ]}
         >
             <ImageOverlay
-                url="floor1.jpg"
+                url={url}
                 bounds={[
                     [0, 0],
                     [1700, 2200],
