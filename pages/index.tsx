@@ -25,7 +25,8 @@ const Home: NextPage = () => {
             <Map url={selectedFloor} />
             <Affix position={{ top: 0, right: 0 }} style={{ width: '100%' }}>
                 <Select
-                    icon={<Search size={14} />}
+                    styles={{ input: { height: '10vh', fontSize: '1.5em' } }}
+                    icon={<Search size={28} />}
                     placeholder="Search"
                     data={placeSelects}
                     value={searchInput}
@@ -43,6 +44,12 @@ const Home: NextPage = () => {
                     value={selectedFloor}
                     onChange={setSelectedFloor}
                     data={floors}
+                    styles={{
+                        label: {
+                            height: '10vh',
+                            fontSize: '1.5em',
+                        },
+                    }}
                 />
             </Affix>
             <Drawer
