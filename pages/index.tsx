@@ -8,7 +8,7 @@ import {
 import type { NextPage } from 'next';
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import { floors, places } from '../src/data';
+import { floors, placeSelects } from '../src/data';
 import { Search } from 'tabler-icons-react';
 
 const Map = dynamic(async () => (await import('../src/components/Map')).Map, {
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
                 <Select
                     icon={<Search size={14} />}
                     placeholder="Search"
-                    data={places}
+                    data={placeSelects}
                     value={searchInput}
                     searchable
                     clearable
