@@ -19,7 +19,14 @@ function MyApp({ Component, pageProps }: AppProps) {
                     crossOrigin=""
                 />
             </Head>
-            <MantineProvider withGlobalStyles withNormalizeCSS>
+            <MantineProvider
+                withGlobalStyles
+                withNormalizeCSS
+                theme={{
+                    black: 'white',
+                    white: '#495e88',
+                }}
+            >
                 <Component {...pageProps} />
             </MantineProvider>
         </>
