@@ -1,78 +1,73 @@
+import { LatLngTuple } from 'leaflet';
+
+export const floorSize: LatLngTuple = [1700, 2200];
+export const floorCenter: LatLngTuple = [1700 / 2, 2200 / 2];
+
 export const floors = [
     { label: 'Floor 1', value: 'floor1.png' },
     { label: 'Floor 2 & 3', value: 'floor2.png' },
 ];
 
-const placeGroups = ['Shops', 'Facility'];
+const placeGroups = ['Assabet Map', 'Shops'];
 
-export const places = {
-    Nurse: {
-        group: 1,
-        description: '',
+interface Place {
+    group: number;
+    description?: string;
+    position?: LatLngTuple;
+}
+
+export const places: Record<string, Place> = {
+    'About App': {
+        group: 0,
+        position: floorCenter,
     },
     'Advanced Manufacturing': {
-        group: 0,
-        description: '',
+        group: 1,
     },
     'Auto Collision': {
-        group: 0,
-        description: '',
+        group: 1,
     },
     'Auto Tech': {
-        group: 0,
-        description: '',
+        group: 1,
     },
     Biotech: {
-        group: 0,
-        description: '',
+        group: 1,
     },
     'Business Tech': {
-        group: 0,
-        description: '',
+        group: 1,
     },
     CPWD: {
-        group: 0,
-        description: '',
+        group: 1,
     },
     Carpentry: {
-        group: 0,
-        description: '',
+        group: 1,
     },
     Cosmetology: {
-        group: 0,
-        description: '',
+        group: 1,
     },
     Culinary: {
-        group: 0,
-        description: '',
+        group: 1,
     },
     'Design and Visual': {
-        group: 0,
-        description: '',
+        group: 1,
     },
     Electrical: {
-        group: 0,
-        description: '',
+        group: 1,
     },
     HVAC: {
-        group: 0,
-        description: '',
+        group: 1,
     },
     'Health Tech': {
-        group: 0,
-        description: '',
+        group: 1,
     },
     'Metal Fabrication': {
-        group: 0,
-        description: '',
+        group: 1,
     },
     'Painting and Design': {
-        group: 0,
-        description: '',
+        group: 1,
     },
     Plumbing: {
-        group: 0,
-        description: '',
+        group: 1,
     },
 };
 
@@ -81,3 +76,15 @@ export const placeSelects = Object.entries(places).map(([place, info]) => ({
     label: place,
     group: placeGroups[info.group],
 }));
+
+export const placeMarkers = Object.entries(places).flatMap(
+    ([place, { position }]) => {
+        if (!position) return [];
+        return [
+            {
+                place,
+                position,
+            },
+        ];
+    },
+);

@@ -22,7 +22,13 @@ const Home: NextPage = () => {
 
     return (
         <div>
-            <Map url={selectedFloor} />
+            <Map
+                url={selectedFloor}
+                onMarkerClick={(value) => {
+                    setSearchInput(value);
+                    setDrawOpened(true);
+                }}
+            />
             <Affix position={{ top: 0, right: 0 }} style={{ width: '100%' }}>
                 <Select
                     styles={{ input: { height: '7vh' } }}
