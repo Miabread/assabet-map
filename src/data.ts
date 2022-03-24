@@ -12,8 +12,8 @@ const placeGroups = ['Assabet Map', 'Shops'];
 
 interface Place {
     group: number;
-    description?: string;
     position?: LatLngTuple;
+    description?: string;
 }
 
 export const places: Record<string, Place> = {
