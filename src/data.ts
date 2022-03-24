@@ -1,7 +1,8 @@
-import { LatLngTuple } from 'leaflet';
+import { LatLngBoundsLiteral, LatLngTuple } from 'leaflet';
 
 export const floorSize: LatLngTuple = [1700, 2200];
-export const floorCenter: LatLngTuple = [1700 / 2, 2200 / 2];
+export const floorBounds: LatLngBoundsLiteral = [[0, 0], floorSize];
+export const floorCenter: LatLngTuple = [floorSize[0] / 2, floorSize[1] / 2];
 
 export const floors = [
     { label: 'Floor 1', value: 'floor1.png' },

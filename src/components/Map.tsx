@@ -1,7 +1,7 @@
 import { CRS } from 'leaflet';
 import { FC } from 'react';
 import { ImageOverlay, MapContainer, Marker } from 'react-leaflet';
-import { floorCenter, floorSize, placeMarkers } from '../data';
+import { floorBounds, floorCenter, floorSize, placeMarkers } from '../data';
 
 export interface Props {
     url: string;
@@ -32,15 +32,9 @@ export const Map: FC<Props> = ({ url, onMarkerClick }) => {
                 height: '100vh',
                 zIndex: 1,
             }}
-            maxBounds={[[0, 0], floorSize]}
+            maxBounds={floorBounds}
         >
-            <ImageOverlay
-                url={url}
-                bounds={[
-                    [0, 0],
-                    [1700, 2200],
-                ]}
-            />
+            <ImageOverlay url={url} bounds={floorBounds} />
             {markers}
         </MapContainer>
     );
