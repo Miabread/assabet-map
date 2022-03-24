@@ -66,7 +66,7 @@ const Home: NextPage = () => {
                 withCloseButton={false}
             >
                 <ScrollArea type="always" style={{ height: '100%' }} p="lg">
-                    {searchInput} {places[searchInput!].description}
+                    {searchInput} {places[searchInput!]?.description}
                 </ScrollArea>
             </Drawer>
         </div>
