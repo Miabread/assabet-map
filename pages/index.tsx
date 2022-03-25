@@ -4,6 +4,7 @@ import {
     ScrollArea,
     SegmentedControl,
     Select,
+    Title,
 } from '@mantine/core';
 import type { NextPage } from 'next';
 import { useState } from 'react';
@@ -65,9 +66,12 @@ const Home: NextPage = () => {
                 size="75%"
                 withCloseButton={false}
             >
-                <ScrollArea type="always" style={{ height: '100%' }} p="lg">
-                    {searchInput} {places[searchInput!]?.description}
-                </ScrollArea>
+                {searchInput && places[searchInput] && (
+                    <ScrollArea type="always" style={{ height: '100%' }} p="lg">
+                        <Title>{searchInput}</Title>
+                        {places[searchInput].description}
+                    </ScrollArea>
+                )}
             </Drawer>
         </div>
     );
