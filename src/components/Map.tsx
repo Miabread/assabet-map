@@ -1,7 +1,7 @@
 import { CRS } from 'leaflet';
 import { FC } from 'react';
 import { ImageOverlay, MapContainer, Marker } from 'react-leaflet';
-import { floorBounds, floorCenter, floors, placeMarkers } from '../data';
+import { floorBounds, floorCenter, floors, placeMarkers } from '../map';
 
 export interface Props {
     url: string;

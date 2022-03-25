@@ -9,8 +9,10 @@ import {
 import type { NextPage } from 'next';
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import { floors, places, placeSelects } from '../src/data';
+import { floors, places, placeSelects } from '../src/map';
 import { Search } from 'tabler-icons-react';
+import { descriptions } from '../src/descriptions';
+import { useDocumentTitle } from '@mantine/hooks';
 
 const Map = dynamic(async () => (await import('../src/components/Map')).Map, {
     ssr: false,
@@ -20,6 +22,10 @@ const Home: NextPage = () => {
     const [drawerOpened, setDrawOpened] = useState(false);
     const [searchInput, setSearchInput] = useState<string | null>(null);
     const [selectedFloor, setSelectedFloor] = useState(floors[0].value);
+
+    useDocumentTitle(
+        drawerOpened ? `${searchInput} - Assabet Map` : 'Assabet Map',
+    );
 
     return (
         <div>
@@ -69,7 +75,7 @@ const Home: NextPage = () => {
                 {searchInput && places[searchInput] && (
                     <ScrollArea type="always" style={{ height: '100%' }} p="lg">
                         <Title>{searchInput}</Title>
-                        {places[searchInput].description}
+                        {descriptions[searchInput]}
                     </ScrollArea>
                 )}
             </Drawer>
