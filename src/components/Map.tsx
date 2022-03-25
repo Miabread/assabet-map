@@ -1,7 +1,7 @@
 import { CRS } from 'leaflet';
 import { FC } from 'react';
 import { ImageOverlay, MapContainer, Marker } from 'react-leaflet';
-import { floorBounds, floorCenter, floorSize, placeMarkers } from '../data';
+import { floorBounds, floorCenter, floors, placeMarkers } from '../data';
 
 export interface Props {
     url: string;
@@ -9,15 +9,17 @@ export interface Props {
 }
 
 export const Map: FC<Props> = ({ url, onMarkerClick }) => {
-    const markers = placeMarkers.map(({ place, position }, key) => (
-        <Marker
-            key={key}
-            position={position}
-            eventHandlers={{
-                click: () => onMarkerClick(place),
-            }}
-        />
-    ));
+    const markers = placeMarkers
+        .filter(({ floor }) => floors[floor].value === url)
+        .map(({ place, position }, key) => (
+            <Marker
+                key={key}
+                position={position}
+                eventHandlers={{
+                    click: () => onMarkerClick(place),
+                }}
+            />
+        ));
 
     return (
         <MapContainer

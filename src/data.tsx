@@ -15,8 +15,13 @@ const placeGroups = ['Assabet Map', 'Shops'];
 
 interface Place {
     group: number;
-    position?: LatLngTuple;
     description?: ReactElement;
+    marker?: Marker;
+}
+
+interface Marker {
+    position: LatLngTuple;
+    floor: number;
 }
 
 const Br = () => <Space h="md" />;
@@ -35,7 +40,7 @@ const bullets = (items: string) => (
 export const places: Record<string, Place> = {
     'About App': {
         group: 0,
-        position: floorCenter,
+        marker: { position: floorCenter, floor: 0 },
     },
     'Advanced Manufacturing': {
         group: 1,
@@ -129,12 +134,12 @@ export const placeSelects = Object.entries(places).map(([place, info]) => ({
 }));
 
 export const placeMarkers = Object.entries(places).flatMap(
-    ([place, { position }]) => {
-        if (!position) return [];
+    ([place, { marker }]) => {
+        if (!marker) return [];
         return [
             {
                 place,
-                position,
+                ...marker,
             },
         ];
     },
