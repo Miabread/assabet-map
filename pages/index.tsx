@@ -54,6 +54,7 @@ const Home: NextPage = () => {
                             display: 'flex',
                             justifyContent: 'center',
                             alignContent: 'center',
+                            alignItems: 'center',
                         },
                     }}
                 />
