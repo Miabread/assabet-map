@@ -53,7 +53,7 @@ export const places: Record<string, Place> = {
     'Business Technology': {
         group: 1,
         marker: {
-            floor: 0,
+            floor: 1,
             position: [1412, 458],
         },
     },
