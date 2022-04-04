@@ -50,8 +50,10 @@ const Home: NextPage = () => {
                     styles={{
                         label: {
                             height: '7vh',
-                            lineHeight: '6vh',
                             fontSize: '1.3em',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignContent: 'center',
                         },
                     }}
                 />
