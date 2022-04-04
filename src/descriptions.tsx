@@ -481,7 +481,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             <PBreak />
             Additional information:
             {bullets(`
-            Seniors take the MACS – Mobile Air Conditioning Society certification test.
+            Seniors take the MACS - Mobile Air Conditioning Society certification test.
             Our state-of-the-art facility includes a computer laser measuring system
             OSHA safety credentials
             This field also provides opportunity for automotive excellence ASE Certification

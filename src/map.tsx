@@ -36,7 +36,7 @@ export const places: Record<string, Place> = {
             position: [1028, 393],
         },
     },
-    'Auto Technology': {
+    'Automotive Technology': {
         group: 1,
         marker: {
             floor: 0,
