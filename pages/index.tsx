@@ -19,23 +19,16 @@ const Map = dynamic(async () => (await import('../src/components/Map')).Map, {
 });
 
 const Home: NextPage = () => {
-    const [drawerOpened, setDrawOpened] = useState(false);
     const [searchInput, setSearchInput] = useState<string | null>(null);
     const [selectedFloor, setSelectedFloor] = useState(floors[0].value);
 
     useDocumentTitle(
-        drawerOpened ? `${searchInput} - Assabet Map` : 'Assabet Map',
+        searchInput ? `${searchInput} - Assabet Map` : 'Assabet Map',
     );
 
     return (
         <div>
-            <Map
-                url={selectedFloor}
-                onMarkerClick={(value) => {
-                    setSearchInput(value);
-                    setDrawOpened(true);
-                }}
-            />
+            <Map url={selectedFloor} onMarkerClick={setSearchInput} />
             <Affix position={{ top: 0, right: 0 }} style={{ width: '100%' }}>
                 <Select
                     styles={{ input: { height: '7vh' } }}
@@ -46,10 +39,7 @@ const Home: NextPage = () => {
                     searchable
                     clearable
                     allowDeselect
-                    onChange={(value) => {
-                        setSearchInput(value);
-                        if (value) setDrawOpened(true);
-                    }}
+                    onChange={setSearchInput}
                 />
             </Affix>
             <Affix position={{ bottom: 0, right: 0 }} style={{ width: '100%' }}>
@@ -66,8 +56,8 @@ const Home: NextPage = () => {
                 />
             </Affix>
             <Drawer
-                opened={drawerOpened}
-                onClose={() => setDrawOpened(false)}
+                opened={searchInput != null}
+                onClose={() => setSearchInput(null)}
                 position="bottom"
                 size="75%"
                 withCloseButton={false}
