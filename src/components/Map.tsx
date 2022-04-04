@@ -8,6 +8,20 @@ export interface Props {
     onMarkerClick: (place: string) => void;
 }
 
+const debugMarkerEnabled = true;
+
+const DebugMarker: FC = () => (
+    <Marker
+        draggable
+        position={floorCenter}
+        eventHandlers={{
+            click({ latlng: { lat, lng } }) {
+                console.log([lat, lng]);
+            },
+        }}
+    />
+);
+
 export const Map: FC<Props> = ({ url, onMarkerClick }) => {
     const markers = placeMarkers
         .filter(({ floor }) => floors[floor].value === url)
@@ -38,6 +52,7 @@ export const Map: FC<Props> = ({ url, onMarkerClick }) => {
         >
             <ImageOverlay url={url} bounds={floorBounds} />
             {markers}
+            {debugMarkerEnabled && <DebugMarker />}
         </MapContainer>
     );
 };
