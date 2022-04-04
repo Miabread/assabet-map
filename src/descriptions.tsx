@@ -16,7 +16,7 @@ const bullets = (items: string) => (
 );
 
 export const descriptions: Record<string, ReactElement | undefined> = {
-    CPWD: (
+    'Computer Programming and Web Development': (
         <>
             <Br />
             Our student-centered curriculum is enhanced by the physical design
@@ -50,7 +50,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             colleges and industry locations.
         </>
     ),
-    'Design and Visual': (
+    'Design and Visual Communications': (
         <>
             Design and Visual Communications (DVC) is an exciting, fast paced,
             creative, and ever evolving program. Curriculum is designed to
@@ -72,7 +72,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             communications industry.
         </>
     ),
-    'Business Tech': (
+    'Business Technology': (
         <>
             Utilizing current office technology, equipment, and software
             programs, students will prepare for Microsoft Office Specialist
@@ -135,7 +135,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             educated, creative role models in their trade area.
         </>
     ),
-    Electrical: (
+    'Electrical Wiring': (
         <>
             Electrical Wiring is a program designed to prepare students to
             install electrical equipment for light, heat, power, motor controls,
@@ -152,7 +152,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             program.
         </>
     ),
-    HVAC: (
+    'Heating, Ventilation, Air Conditioning, and Refrigeration': (
         <>
             The Heating, Ventilation, Air Conditioning, and Refrigeration
             (HVAC/R) field is one of the fastest expanding occupations in the
@@ -245,7 +245,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             both residential homes and commercial buildings.
         </>
     ),
-    Culinary: (
+    'Culinary Arts and Hospitality Management': (
         <>
             Culinary Arts is an instructional program that prepares individual
             students in food technology skills and customer relations while
@@ -292,7 +292,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             `)}
         </>
     ),
-    'Health Tech': (
+    'Health Technology': (
         <>
             Health Technologies is an excellent program for students interested
             in a career in the high-demand area of healthcare and human
@@ -353,7 +353,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             post-secondary education.
         </>
     ),
-    Biotech: (
+    Biotechnology: (
         <>
             Welcome to Biotechnology!
             <Br />
@@ -399,7 +399,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             more information on this career path.
         </>
     ),
-    'Metal Fabrication': (
+    'Metal Fabrication and Welding': (
         <>
             The Metal Fabrication and Welding program is designed to prepare
             students to be skilled fabricators, welders, and sheet metal
@@ -456,7 +456,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             `)}
         </>
     ),
-    'Auto Collision': (
+    'Automotive Collision': (
         <>
             Automotive Body Repair is an increasingly technical and continually
             changing field. This program provides training in all aspects of
@@ -491,7 +491,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             `)}
         </>
     ),
-    'Auto Tech': (
+    'Automotive Technology': (
         <>
             The Automotive Technology program is designed to provide young men
             and women the knowledge and critical thinking skills required to

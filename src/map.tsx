@@ -29,19 +29,19 @@ export const places: Record<string, Place> = {
     'Advanced Manufacturing': {
         group: 1,
     },
-    'Auto Collision': {
+    'Automotive Collision': {
         group: 1,
     },
-    'Auto Tech': {
+    'Auto Technology': {
         group: 1,
     },
-    Biotech: {
+    Biotechnology: {
         group: 1,
     },
-    'Business Tech': {
+    'Business Technology': {
         group: 1,
     },
-    CPWD: {
+    'Computer Programming and Web Development': {
         group: 1,
     },
     Carpentry: {
@@ -50,22 +50,22 @@ export const places: Record<string, Place> = {
     Cosmetology: {
         group: 1,
     },
-    Culinary: {
+    'Culinary Arts and Hospitality Management': {
         group: 1,
     },
-    'Design and Visual': {
+    'Design and Visual Communications': {
         group: 1,
     },
-    Electrical: {
+    'Electrical Wiring': {
         group: 1,
     },
-    HVAC: {
+    'Heating, Ventilation, Air Conditioning, and Refrigeration': {
         group: 1,
     },
-    'Health Tech': {
+    'Health Technology': {
         group: 1,
     },
-    'Metal Fabrication': {
+    'Metal Fabrication and Welding': {
         group: 1,
     },
     'Painting and Design': {
