@@ -22,10 +22,6 @@ interface Marker {
 }
 
 export const places: Record<string, Place> = {
-    'About App': {
-        group: 0,
-        marker: { position: floorCenter, floor: 0 },
-    },
     'Advanced Manufacturing': {
         group: 1,
     },

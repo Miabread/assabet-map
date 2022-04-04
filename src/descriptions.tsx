@@ -1,7 +1,7 @@
 import { List, Space } from '@mantine/core';
 import { ReactElement } from 'react';
 
-const Br = () => <Space h="md" />;
+const PBreak = () => <Space h="md" />;
 
 const bullets = (items: string) => (
     <List>
@@ -18,20 +18,20 @@ const bullets = (items: string) => (
 export const descriptions: Record<string, ReactElement | undefined> = {
     'Computer Programming and Web Development': (
         <>
-            <Br />
+            <PBreak />
             Our student-centered curriculum is enhanced by the physical design
             and technology-rich content of our classroom. Students move around
             this space as they collaborate, plan, imagine, problem-solve,
             manage, lead, participate, discuss, debate, and ponder with each
             other, the instructors, and clients.
-            <Br />
+            <PBreak />
             Our base curriculum encompasses web programming in HTML & CSS with
             Notepad++, XML, & JavaScript, along with programming in Alice 3,
             Python, Java, and possibly C#, writing, and Microsoft Office tools
             including MS Project. Students have Parallax Scribbler robots,
             Parrot AR Drones, a NAO robot, and several smaller robots and live
             client web sites to help expand their skills and knowledge.
-            <Br />
+            <PBreak />
             Additional areas for students to explore include:
             {bullets(`
             Video game development
@@ -42,7 +42,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             OSHA 10-Hour General Industry certificate
             Google IT Support Professional certificate
             `)}
-            <Br />
+            <PBreak />
             Other opportunities our students are exposed to are co-op jobs,
             senior capstone projects, community service projects in sending
             towns, SkillsUSA and BPA competitions, Linux operating system, The
@@ -56,7 +56,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             creative, and ever evolving program. Curriculum is designed to
             expose students to vast career opportunities that exist in the
             creative, multi-media, and communications industry.
-            <Br />
+            <PBreak />
             Students receive training across various media, including print,
             video, web/interactive, and photography. Students learn how to
             problem solve, experiment, and explore to create visual solutions
@@ -64,7 +64,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             also practice valuable employment skills, create resumes, interact
             with clients, and complete real-world projects for businesses and
             organizations in the Assabet Valley RTHS school district.
-            <Br />
+            <PBreak />
             Students graduating from the DVC program will leave with a
             professional portfolio, demo reel, Adobe® Certification, and OSHA
             10-hour safety certification. DVC graduates will be ready to enter a
@@ -80,14 +80,14 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             projects. They experience the business environment through the
             internship work within the school&apos;s administrative offices and
             junior/senior cooperative placement opportunities.
-            <Br />
+            <PBreak />
             In addition to technical skills, the major emphases of the
             curriculum are effective communication and critical thinking and
             problem solving skills. Specialized instruction is provided based on
             student skill levels and interests. Graduates begin careers in a
             wide venue of business opportunities or pursue further education in
             business, administration, finance, management, etc.
-            <Br />
+            <PBreak />
             Business Technology provides hands-on training in:
             {bullets(`
             Data entry
@@ -116,21 +116,21 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             styling, coloring, and waving of hair; as well as the treatment of
             skin and scalp. Students are also trained in sanitary procedures
             relating to all areas of study.
-            <Br />
+            <PBreak />
             An active, on-site clinic provides students the opportunity to
             refine their skills in a fully-equipped salon setting with a private
             esthetics center. Program graduates are prepared for the state
             examination in Cosmetology.
-            <Br />
+            <PBreak />
             Course Philosophy:
-            <Br />
+            <PBreak />
             Students will receive instructions, demonstration, and clinical
             opportunities necessary in preparation for the Massachusetts State
             Board of Cosmetology Exam.
-            <Br />
+            <PBreak />
             Students will acquire the necessary knowledge and skills that would
             enable them to pursue a separate manicuring or esthetics license.
-            <Br />
+            <PBreak />
             Students will become responsible, professional cosmetologists and
             educated, creative role models in their trade area.
         </>
@@ -170,12 +170,12 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             mathematics, framing, construction material and selection, job
             estimating, blueprint reading, foundations and roughing-in, finish
             carpentry techniques, and applicable codes and standards.
-            <Br />
+            <PBreak />
             In addition, the program will prepare individuals to apply technical
             knowledge and skills to set up and operate industrial woodworking
             machinery and to use such machinery to design and fabricate wooden
             components and complete articles.
-            <Br />
+            <PBreak />
             {bullets(`
             Identifying carpentry safety
             Demonstrating the fundamentals of carpentry
@@ -204,7 +204,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             create decorative finishes?
             use your imagination?
             `)}
-            <Br />
+            <PBreak />
             The Painting and Design program seeks to give students a wide array
             of skills that will reflect a strong, creative work ethic. Problem
             solving and hands-on experience with ever changing materials keeps
@@ -216,7 +216,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             through community-based, live work gives students job experience.
             The Painting and Design program offers an integrated technical and
             academic learning experience that ensures everyone succeeds.
-            <Br />
+            <PBreak />
             Skills acquired:
             {bullets(`
             Painting
@@ -238,7 +238,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             Plumbing is a licensed trade that requires not only strong technical
             knowledge and skill, but also a thorough understanding of the
             Massachusetts State Plumbing and Fuel Gas Code.
-            <Br />
+            <PBreak />
             The Plumbing Program is designed to feature both shop and off-campus
             jobsite learning opportunities. Students will master the
             installation and repair of water, waste, gas, and heating systems in
@@ -253,7 +253,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             Students will apply computer technology and work with
             state-of-the-art equipment in the restaurant, kitchen, and bakery
             areas.
-            <Br />
+            <PBreak />
             Culinary Arts focuses on curriculum development and standardized
             learning with emphasis on performance objectives, a variety of
             learning activities, and student assessment. Students engage in
@@ -267,7 +267,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             educational opportunities so that they can continue to learn about,
             participate in, and contribute to a changing community and
             workplace.
-            <Br />
+            <PBreak />
             Through the operation of a popular on-site restaurant, as well as
             the catering of a variety of community functions, students have the
             opportunity to learn all aspects of the trade, such as:
@@ -302,7 +302,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             assisted living facilities. Students who meet the Department of
             Public Health requirements may be eligible to take the American Red
             Cross Nurse Assistant exam.
-            <Br />
+            <PBreak />
             The curriculum includes related theory classes, including:
             {bullets(`
             Healthcare exploration
@@ -312,7 +312,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             Growth and Development
             Dean Vaughn Medical Terminology
             `)}
-            <Br />
+            <PBreak />
             Students from our program may graduate with the following
             certifications:
             {bullets(`
@@ -338,16 +338,16 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             Manufacturing Program. They will be instructed in the utilization
             and care of bench tools, inspection instruments, metal cutting
             lathes, milling machines, drilling machines, and grinders.
-            <Br />
+            <PBreak />
             Upon learning these basics, students shall be instructed in the more
             technologically modern aspect of computerized manufacturing.
             Included in this program are study segments involving the operation
             of modern, highly sophisticated computer numerical controlled (CNC)
             machinery.
-            <Br />
+            <PBreak />
             Students will also train on industry-standard computer software:
             MasterCam and SolidWorks.
-            <Br />
+            <PBreak />
             All aspects of the shop prepare the graduate with skills and
             knowledge to enter the manufacturing workforce or pursue
             post-secondary education.
@@ -356,20 +356,20 @@ export const descriptions: Record<string, ReactElement | undefined> = {
     Biotechnology: (
         <>
             Welcome to Biotechnology!
-            <Br />
+            <PBreak />
             Biotechnology is a growing field with a wide range of exciting and
             challenging employment opportunities. Biotechnology is the
             commercialization of biology. It is an evolving discipline in which
             biological organisms are used to improve the lives of people and
             animals.
-            <Br />
+            <PBreak />
             The Biotechnology program is designed to prepare students for
             further education as well as for entry-level positions in
             biopharmaceutical manufacturing, research and development,
             laboratory animal care, environmental science, and forensic science.
             Students will engage in precise technical activities, maintain
             careful records, and work in teams in an orderly, clean environment.
-            <Br />
+            <PBreak />
             Students observe and learn about a variety of careers involved with
             biotechnology, from engineering to manufacturing to animal science.
             Examples of field trips taken to explore career opportunities in
@@ -377,7 +377,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             Veterinary School, Worcester State University, Worcester Polytechnic
             Institute, Ariad Pharmaceuticals, and the Massachusetts State Crime
             Lab.
-            <Br />
+            <PBreak />
             Upperclassmen in biotechnology participate in student-driven
             projects that are presented in a shop-wide science fair. These
             projects may go on to compete at the Worcester Regional Science &
@@ -385,10 +385,10 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             Fair. The Biotechnology Program also participates in the Wolbachia
             project, which examines the Wolbachia bacteria living within some
             local insects.
-            <Br />
+            <PBreak />
             Certifications offered in this vocational program include the OSHA
             10-Hour General Industry Certification & CPR.
-            <Br />
+            <PBreak />
             Students in this program complete the Assistant Lab Animal
             Technician (ALAT) training. The requirements for the ALAT
             certification are a year of practical experience working in a lab
@@ -413,21 +413,21 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             biotech applications. In addition to developing a solid foundation
             in technical skills, the program emphasizes core values, including
             community service and good citizenship.
-            <Br />
+            <PBreak />
             Field trips are an integral part of the curriculum in Metal
             Fabrication. Visits to apprenticeship programs, job sites, local
             businesses, and colleges show the students their futures in the
             field. Our students also have the opportunity to enter numerous
             regional/national welding and creative metal art competitions. This
             program has proudly produced many champions.
-            <Br />
+            <PBreak />
             Students who wish to continue their technical metal working
             education can attend two- or four-year colleges in the metallurgy,
             structural engineering, mechanical engineering, and metal art areas
             of study.
-            <Br />
+            <PBreak />
             Course Offerings:
-            <Br />
+            <PBreak />
             Welder Performance Qualification Tests in the following:
             {bullets(`
             Shielded Metal Arc Welding (SMAW / Stick)
@@ -436,7 +436,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             Flux Core Arc Welding (FCAW)
             Pipe welding in all positions (SMAW and GTAW)
             `)}
-            <Br />
+            <PBreak />
             {bullets(`
             Titanium welding (GTAW process)
             Plasma arc cutting (computer-operated and hand-held)
@@ -463,7 +463,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             vehicle repair and reconditioning, including sheet metal work,
             unibody alignment, MIG welding, collision repair, computerized
             estimating, and finish paint.
-            <Br />
+            <PBreak />
             The following skills will be learned:
             {bullets(`
             Preparing car for painting
@@ -479,7 +479,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             Panel bonding
             Applied Auto Collision mathematics and science
             `)}
-            <Br />
+            <PBreak />
             Additional information:
             {bullets(`
             Seniors take the MACS – Mobile Air Conditioning Society certification test.
@@ -496,13 +496,13 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             The Automotive Technology program is designed to provide young men
             and women the knowledge and critical thinking skills required to
             meet the growing demands of the automotive industry.
-            <Br />
+            <PBreak />
             The Automotive Technology Department is NATEF Master Certified
             through the National Automotive Technicians Education Foundation.
             Graduates of the department are consistently recruited by local
             automotive businesses and hold a variety of positions in the
             automotive industry.
-            <Br />
+            <PBreak />
             The Automotive Technology facility includes a state-of-the-art lab
             and a fully equipped operational shop that is open to the public:
             {bullets(`
@@ -520,7 +520,7 @@ export const descriptions: Record<string, ReactElement | undefined> = {
             Service and repair automotive electrical and electronic systems
             Service and repair air conditioning systems (including climate control)
             `)}
-            <Br />
+            <PBreak />
             Certifications available in
             {bullets(`
             A/C Refrigerant Recovery & Recycling
