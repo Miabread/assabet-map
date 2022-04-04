@@ -8,8 +8,6 @@ export interface Props {
     onMarkerClick: (place: string) => void;
 }
 
-const debugMarkerEnabled = true;
-
 const DebugMarker: FC = () => (
     <Marker
         draggable
@@ -52,7 +50,7 @@ export const Map: FC<Props> = ({ url, onMarkerClick }) => {
         >
             <ImageOverlay url={url} bounds={floorBounds} />
             {markers}
-            {debugMarkerEnabled && <DebugMarker />}
+            {(window as any).debugMarkerEnabled && <DebugMarker />}
         </MapContainer>
     );
 };
