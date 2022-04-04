@@ -1,7 +1,7 @@
 import { List, Space } from '@mantine/core';
 import { ReactElement } from 'react';
 
-const PBreak = () => <Space h="md" />;
+export const PBreak = () => <Space h="md" />;
 
 const bullets = (items: string) => (
     <List>
@@ -18,7 +18,6 @@ const bullets = (items: string) => (
 export const descriptions: Record<string, ReactElement | undefined> = {
     'Computer Programming and Web Development': (
         <>
-            <PBreak />
             Our student-centered curriculum is enhanced by the physical design
             and technology-rich content of our classroom. Students move around
             this space as they collaborate, plan, imagine, problem-solve,

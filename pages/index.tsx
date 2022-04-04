@@ -11,7 +11,7 @@ import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { floors, places, placeSelects } from '../src/map';
 import { Search } from 'tabler-icons-react';
-import { descriptions } from '../src/descriptions';
+import { descriptions, PBreak } from '../src/descriptions';
 import { useDocumentTitle } from '@mantine/hooks';
 
 const Map = dynamic(async () => (await import('../src/components/Map')).Map, {
@@ -65,6 +65,7 @@ const Home: NextPage = () => {
                 {searchInput && places[searchInput] && (
                     <ScrollArea type="always" style={{ height: '100%' }} p="lg">
                         <Title>{searchInput}</Title>
+                        <PBreak />
                         {descriptions[searchInput]}
                     </ScrollArea>
                 )}
