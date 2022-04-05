@@ -22,7 +22,7 @@ export const Markers: FC = () => {
 };
 
 export const DebugMarker: FC = () => {
-    if ((window as any).debugMarkerEnabled) return null;
+    if (!(window as any).debugMarkerEnabled) return null;
 
     return (
         <Marker

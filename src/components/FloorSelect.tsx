@@ -9,9 +9,9 @@ export const FloorSelect: FC = () => {
     return (
         <Affix position={{ bottom: 0, right: 0 }} style={{ width: '100%' }}>
             <SegmentedControl
-                value={floors[floor].value}
+                value={floor}
                 onChange={selectFloor}
-                data={floors}
+                data={Object.keys(floors)}
                 styles={{
                     label: {
                         height: '7vh',

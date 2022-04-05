@@ -5,20 +5,21 @@ import { floors, places } from './map';
 interface AppState {
     search: string | null;
     drawer: string | null;
-    floor: number;
+    floor: string;
 }
 
 const initialState: AppState = {
     search: null,
     drawer: null,
-    floor: 0,
+    floor: 'Floor 1',
 };
 
 const methods = (state: AppState) => ({
     onSearchSelect(value: string | null) {
         state.search = value;
+
         if (!value) return;
-        state.floor = places[value].marker.floor;
+        state.floor = places[value].floor;
     },
 
     closeDrawer() {
@@ -26,7 +27,7 @@ const methods = (state: AppState) => ({
     },
 
     selectFloor(value: string) {
-        state.floor = floors.findIndex((floor) => floor.value === value);
+        state.floor = value;
     },
 
     clickMarker(place: string) {

@@ -9,11 +9,7 @@ export const GotoSearchPos: FC = () => {
 
     useEffect(() => {
         if (!search) return;
-
-        const destination = places[search].marker.position;
-        if (!destination) return;
-
-        map.setView(destination);
+        map.setView(places[search].position);
     }, [search, map]);
 
     return null;

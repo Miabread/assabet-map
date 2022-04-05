@@ -24,7 +24,7 @@ export const Map: FC = () => {
             }}
             maxBounds={floorBounds}
         >
-            <ImageOverlay url={floors[floor].value} bounds={floorBounds} />
+            <ImageOverlay url={floors[floor]} bounds={floorBounds} />
             <Markers />
             <DebugMarker />
             <GotoSearchPos />
