@@ -10,8 +10,8 @@ const placeSelects = Object.entries(places).map(([place, info]) => ({
     group: info.group,
 }));
 
-export const SearchBar: FC = () => {
-    const [{ search }, { onSearchSelect }] = useAppState();
+export const PlaceSelect: FC = () => {
+    const [{ selectedPlace }, { selectPlace }] = useAppState();
 
     return (
         <Affix position={{ top: 0, right: 0 }} style={{ width: '100%' }}>
@@ -20,11 +20,11 @@ export const SearchBar: FC = () => {
                 icon={<Search size={28} />}
                 placeholder="Search"
                 data={placeSelects}
-                value={search}
+                value={selectedPlace}
                 searchable
                 clearable
                 allowDeselect
-                onChange={onSearchSelect}
+                onChange={selectPlace}
             />
         </Affix>
     );

@@ -3,24 +3,24 @@ import useMethods, { StateAndCallbacksFor } from 'use-methods';
 import { floors, places } from './map';
 
 interface AppState {
-    search: string | null;
+    selectedPlace: string | null;
     drawer: string | null;
     floor: string;
     gotoPosition: string | null;
 }
 
 const initialState: AppState = {
-    search: null,
+    selectedPlace: null,
     drawer: null,
     floor: 'Floor 1',
     gotoPosition: null,
 };
 
 const methods = (state: AppState) => ({
-    onSearchSelect(value: string | null) {
+    selectPlace(value: string | null) {
         if (!value) return;
 
-        state.search = null;
+        state.selectedPlace = null;
         state.floor = places[value].floor;
         state.gotoPosition = value;
     },

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
-import { SearchBar } from '../src/components/SearchBar';
+import { PlaceSelect } from '../src/components/PlaceSelect';
 import { FloorSelect } from '../src/components/FloorSelect';
 import { InfoDrawer } from '../src/components/InfoDrawer';
 import { AppState } from '../src/AppState';
@@ -15,7 +15,7 @@ const Map = dynamic(
 const Home: NextPage = () => (
     <AppState>
         <Map />
-        <SearchBar />
+        <PlaceSelect />
         <FloorSelect />
         <InfoDrawer />
     </AppState>
