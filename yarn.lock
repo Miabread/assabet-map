@@ -2013,6 +2013,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react@npm:^16.8.19":
+  version: 16.14.24
+  resolution: "@types/react@npm:16.14.24"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 823f3fc6219f59dff7a005ca33adbac70e7ef7a5e15a844c40ba36247c007bd1e1fbfc784052336f60ecbee09f06b7c6c7433e8cece3a87247061bbac74b2576
+  languageName: node
+  linkType: hard
+
 "@types/resolve@npm:1.17.1":
   version: 1.17.1
   resolution: "@types/resolve@npm:1.17.1"
@@ -2325,6 +2336,7 @@ __metadata:
     styled-jsx: ^5.0.0
     tabler-icons-react: ^1.40.0
     typescript: ^4.6.3
+    use-methods: ^0.5.1
   languageName: unknown
   linkType: soft
 
@@ -3857,6 +3869,13 @@ __metadata:
   version: 5.2.0
   resolution: "ignore@npm:5.2.0"
   checksum: 6b1f926792d614f64c6c83da3a1f9c83f6196c2839aa41e1e32dd7b8d174cef2e329d75caabb62cb61ce9dc432f75e67d07d122a037312db7caa73166a1bdb77
+  languageName: node
+  linkType: hard
+
+"immer@npm:^3.1.2":
+  version: 3.3.0
+  resolution: "immer@npm:3.3.0"
+  checksum: 73eb32194668acb1cfa1b83c7f4337f77ea97f0281c53c4bfb6e9d0760c8d0c9bb9c1f2135cca6064af09f3c0835ea5f3084e6d58be6160f75d8a632a612f5e0
   languageName: node
   linkType: hard
 
@@ -6270,6 +6289,18 @@ __metadata:
     "@types/react":
       optional: true
   checksum: f0cb3a49119e14ed46db8a946b1aa17b838b8834c8a652bde314877ede6057c55b50654a97ee802597a5839c070180195e58ea3a756b7c33db7f540642f0ddea
+  languageName: node
+  linkType: hard
+
+"use-methods@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "use-methods@npm:0.5.1"
+  dependencies:
+    "@types/react": ^16.8.19
+    immer: ^3.1.2
+  peerDependencies:
+    react: ^16.8.0
+  checksum: dc694e848c694b084170b7483361e4563f9e4de95f766b1329e52e078168f683e3f0722b70a4503f594a637529bb2a7137ab0fc70701e35e04cc3933d3963f18
   languageName: node
   linkType: hard
 

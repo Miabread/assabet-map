@@ -50,7 +50,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-leaflet", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:3.2.5"],\
             ["styled-jsx", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:5.0.0"],\
             ["tabler-icons-react", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:1.40.0"],\
-            ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"],\
+            ["use-methods", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:0.5.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -3709,7 +3710,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-leaflet", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:3.2.5"],\
             ["styled-jsx", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:5.0.0"],\
             ["tabler-icons-react", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:1.40.0"],\
-            ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"],\
+            ["use-methods", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:0.5.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -5639,6 +5641,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ignore-npm-5.2.0-fc4b58a4f3-6b1f926792.zip/node_modules/ignore/",\
           "packageDependencies": [\
             ["ignore", "npm:5.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["immer", [\
+        ["npm:3.3.0", {\
+          "packageLocation": "./.yarn/cache/immer-npm-3.3.0-0062e937cd-73eb321946.zip/node_modules/immer/",\
+          "packageDependencies": [\
+            ["immer", "npm:3.3.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8447,6 +8458,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.39"],\
             ["react", "npm:17.0.2"],\
             ["use-isomorphic-layout-effect", "virtual:4e2c70961f53efe12ce3116e885f5a7c14bda59e8b130c7c661691e44bb0314c3fc69f2da20ddfda867138675f479eea5a98090db8705285e3a8e49fc604826e#npm:1.1.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["use-methods", [\
+        ["npm:0.5.1", {\
+          "packageLocation": "./.yarn/cache/use-methods-npm-0.5.1-de328bff40-dc694e848c.zip/node_modules/use-methods/",\
+          "packageDependencies": [\
+            ["use-methods", "npm:0.5.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:0.5.1", {\
+          "packageLocation": "./.yarn/__virtual__/use-methods-virtual-2533eb2849/0/cache/use-methods-npm-0.5.1-de328bff40-dc694e848c.zip/node_modules/use-methods/",\
+          "packageDependencies": [\
+            ["use-methods", "virtual:522771c76143ed59bbabd8528a6f56a495ed364b560695e3afaceea2f6af95bc4d1bd74ca9deda5fe176269f31d0f51747b804f572c9535e08ade94b01151d06#npm:0.5.1"],\
+            ["@types/react", "npm:17.0.39"],\
+            ["immer", "npm:3.3.0"],\
+            ["react", "npm:17.0.2"]\
           ],\
           "packagePeers": [\
             "@types/react",\

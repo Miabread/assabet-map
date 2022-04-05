@@ -11,9 +11,9 @@ export const floors = [
 
 const placeGroups = ['Assabet Map', 'Shops'];
 
-interface Place {
+export interface Place {
     group: number;
-    marker?: Marker;
+    marker: Marker;
 }
 
 interface Marker {

@@ -1,12 +1,8 @@
 import { CRS } from 'leaflet';
 import { FC, useEffect } from 'react';
 import { ImageOverlay, MapContainer, Marker, useMap } from 'react-leaflet';
+import { useAppState } from '../AppState';
 import { floorBounds, floorCenter, floors, placeMarkers, places } from '../map';
-
-export interface Props extends GotoProps {
-    url: string;
-    onMarkerClick: (place: string) => void;
-}
 
 const DebugMarker: FC = () => (
     <Marker
@@ -20,32 +16,31 @@ const DebugMarker: FC = () => (
     />
 );
 
-interface GotoProps {
-    searchInput: string | null;
-}
-
-const Goto: FC<GotoProps> = ({ searchInput }) => {
+const Goto: FC = () => {
+    const [{ search }] = useAppState();
     const map = useMap();
 
     useEffect(() => {
-        const destination = places[searchInput ?? '']?.marker?.position;
+        if (!search) return;
+        const destination = places[search].marker.position;
         if (!destination) return;
         map.setView(destination);
-        console.log(destination);
-    }, [searchInput, map]);
+    }, [search, map]);
 
     return null;
 };
 
-export const Map: FC<Props> = ({ url, onMarkerClick, searchInput }) => {
+export const Map: FC = () => {
+    const [{ floor }, { clickMarker }] = useAppState();
+
     const markers = placeMarkers
-        .filter(({ floor }) => floors[floor].value === url)
+        .filter((marker) => marker.floor === floor)
         .map(({ place, position }, key) => (
             <Marker
                 key={key}
                 position={position}
                 eventHandlers={{
-                    click: () => onMarkerClick(place),
+                    click: () => clickMarker(place),
                 }}
             />
         ));
@@ -65,10 +60,10 @@ export const Map: FC<Props> = ({ url, onMarkerClick, searchInput }) => {
             }}
             maxBounds={floorBounds}
         >
-            <ImageOverlay url={url} bounds={floorBounds} />
+            <ImageOverlay url={floors[floor].value} bounds={floorBounds} />
             {markers}
             {(window as any).debugMarkerEnabled && <DebugMarker />}
-            <Goto searchInput={searchInput} />
+            <Goto />
         </MapContainer>
     );
 };
