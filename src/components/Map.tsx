@@ -1,9 +1,9 @@
 import { CRS } from 'leaflet';
-import { FC } from 'react';
-import { ImageOverlay, MapContainer, Marker } from 'react-leaflet';
-import { floorBounds, floorCenter, floors, placeMarkers } from '../map';
+import { FC, useEffect } from 'react';
+import { ImageOverlay, MapContainer, Marker, useMap } from 'react-leaflet';
+import { floorBounds, floorCenter, floors, placeMarkers, places } from '../map';
 
-export interface Props {
+export interface Props extends GotoProps {
     url: string;
     onMarkerClick: (place: string) => void;
 }
@@ -20,7 +20,24 @@ const DebugMarker: FC = () => (
     />
 );
 
-export const Map: FC<Props> = ({ url, onMarkerClick }) => {
+interface GotoProps {
+    searchInput: string | null;
+}
+
+const Goto: FC<GotoProps> = ({ searchInput }) => {
+    const map = useMap();
+
+    useEffect(() => {
+        const destination = places[searchInput ?? '']?.marker?.position;
+        if (!destination) return;
+        map.setView(destination);
+        console.log(destination);
+    }, [searchInput, map]);
+
+    return null;
+};
+
+export const Map: FC<Props> = ({ url, onMarkerClick, searchInput }) => {
     const markers = placeMarkers
         .filter(({ floor }) => floors[floor].value === url)
         .map(({ place, position }, key) => (
@@ -51,6 +68,7 @@ export const Map: FC<Props> = ({ url, onMarkerClick }) => {
             <ImageOverlay url={url} bounds={floorBounds} />
             {markers}
             {(window as any).debugMarkerEnabled && <DebugMarker />}
+            <Goto searchInput={searchInput} />
         </MapContainer>
     );
 };

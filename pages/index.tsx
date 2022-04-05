@@ -20,15 +20,20 @@ const Map = dynamic(async () => (await import('../src/components/Map')).Map, {
 
 const Home: NextPage = () => {
     const [searchInput, setSearchInput] = useState<string | null>(null);
+    const [drawerPage, setDrawerPage] = useState<string | null>(null);
     const [selectedFloor, setSelectedFloor] = useState(floors[0].value);
 
     useDocumentTitle(
-        searchInput ? `${searchInput} - Assabet Map` : 'Assabet Map',
+        drawerPage ? `${drawerPage} - Assabet Map` : 'Assabet Map',
     );
 
     return (
         <div>
-            <Map url={selectedFloor} onMarkerClick={setSearchInput} />
+            <Map
+                url={selectedFloor}
+                onMarkerClick={setDrawerPage}
+                searchInput={searchInput}
+            />
             <Affix position={{ top: 0, right: 0 }} style={{ width: '100%' }}>
                 <Select
                     styles={{ input: { height: '7vh' } }}
@@ -39,7 +44,14 @@ const Home: NextPage = () => {
                     searchable
                     clearable
                     allowDeselect
-                    onChange={setSearchInput}
+                    onChange={(value) => {
+                        setSearchInput(value);
+                        if (value && places[value]?.marker) {
+                            setSelectedFloor(
+                                floors[places[value].marker!.floor].value,
+                            );
+                        }
+                    }}
                 />
             </Affix>
             <Affix position={{ bottom: 0, right: 0 }} style={{ width: '100%' }}>
@@ -60,17 +72,17 @@ const Home: NextPage = () => {
                 />
             </Affix>
             <Drawer
-                opened={searchInput != null}
-                onClose={() => setSearchInput(null)}
+                opened={drawerPage != null}
+                onClose={() => setDrawerPage(null)}
                 position="bottom"
                 size="75%"
                 withCloseButton={false}
             >
-                {searchInput && places[searchInput] && (
+                {drawerPage && places[drawerPage] && (
                     <ScrollArea type="always" style={{ height: '100%' }} p="lg">
-                        <Title>{searchInput}</Title>
+                        <Title>{drawerPage}</Title>
                         <PBreak />
-                        {descriptions[searchInput]}
+                        {descriptions[drawerPage]}
                     </ScrollArea>
                 )}
             </Drawer>
