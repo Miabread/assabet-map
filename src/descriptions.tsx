@@ -14,7 +14,7 @@ const bullets = (items: string) => (
     </List>
 );
 
-export const descriptions: Record<string, ReactElement | undefined> = {
+export const descriptions: Record<string, ReactElement> = {
     'Computer Programming and Web Development': (
         <>
             Our student-centered curriculum is enhanced by the physical design

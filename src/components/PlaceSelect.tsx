@@ -2,7 +2,7 @@ import { Affix, Select } from '@mantine/core';
 import { FC } from 'react';
 import { Search } from 'tabler-icons-react';
 import { useAppState } from '../AppState';
-import { places } from '../map';
+import { places } from '../places';
 
 const placeSelects = Object.entries(places).map(([place, info]) => ({
     value: place,

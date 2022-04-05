@@ -1,7 +1,7 @@
 import { LatLngTuple } from 'leaflet';
 import { createContext, FC, useContext } from 'react';
 import useMethods, { StateAndCallbacksFor } from 'use-methods';
-import { places } from './map';
+import { places } from './places';
 
 interface AppState {
     selectedPlace: string | null;

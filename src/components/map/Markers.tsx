@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Marker } from 'react-leaflet';
 import { useAppState } from '../../AppState';
-import { floorCenter, places } from '../../map';
+import { floorCenter, places } from '../../places';
 
 export const Markers: FC = () => {
     const [{ floor }, { clickMarker }] = useAppState();

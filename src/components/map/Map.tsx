@@ -2,7 +2,7 @@ import { CRS } from 'leaflet';
 import { FC } from 'react';
 import { ImageOverlay, MapContainer } from 'react-leaflet';
 import { useAppState } from '../../AppState';
-import { floorBounds, floorCenter, floors } from '../../map';
+import { floorBounds, floorCenter, floors } from '../../places';
 import { GotoPosition } from './GotoPosition';
 import { DebugMarker, Markers } from './Markers';
 

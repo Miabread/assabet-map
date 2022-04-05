@@ -9,9 +9,12 @@ export const floors: Record<string, string> = {
     'Floor 2 & 3': 'floor2.png',
 };
 
+type Group = 'Shops';
+type Floor = 'Floor 1' | 'Floor 2 & 3';
+
 interface Place {
-    group: string;
-    floor: string;
+    group: Group;
+    floor: Floor;
     position: LatLngTuple;
 }
 

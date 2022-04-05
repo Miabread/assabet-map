@@ -1,7 +1,7 @@
 import { Affix, SegmentedControl } from '@mantine/core';
 import { FC } from 'react';
 import { useAppState } from '../AppState';
-import { floors } from '../map';
+import { floors } from '../places';
 
 export const FloorSelect: FC = () => {
     const [{ floor }, { selectFloor }] = useAppState();
