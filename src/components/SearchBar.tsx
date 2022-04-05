@@ -2,7 +2,13 @@ import { Affix, Select } from '@mantine/core';
 import { FC } from 'react';
 import { Search } from 'tabler-icons-react';
 import { useAppState } from '../AppState';
-import { placeSelects } from '../map';
+import { places } from '../map';
+
+const placeSelects = Object.entries(places).map(([place, info]) => ({
+    value: place,
+    label: place,
+    group: info.group,
+}));
 
 export const SearchBar: FC = () => {
     const [{ search }, { onSearchSelect }] = useAppState();

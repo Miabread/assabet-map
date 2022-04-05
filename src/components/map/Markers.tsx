@@ -1,19 +1,19 @@
 import { FC } from 'react';
 import { Marker } from 'react-leaflet';
 import { useAppState } from '../../AppState';
-import { floorCenter, placeMarkers } from '../../map';
+import { floorCenter, places } from '../../map';
 
 export const Markers: FC = () => {
     const [{ floor }, { clickMarker }] = useAppState();
 
-    const markers = placeMarkers
-        .filter((marker) => marker.floor === floor)
-        .map(({ place, position }, key) => (
+    const markers = Object.entries(places)
+        .filter(([_, place]) => place.floor === floor)
+        .map(([name, { position }]) => (
             <Marker
-                key={key}
+                key={name}
                 position={position}
                 eventHandlers={{
-                    click: () => clickMarker(place),
+                    click: () => clickMarker(name),
                 }}
             />
         ));
