@@ -1,6 +1,6 @@
 import { createContext, FC, useContext } from 'react';
 import useMethods, { StateAndCallbacksFor } from 'use-methods';
-import { floors, Place, places } from './map';
+import { floors, places } from './map';
 
 interface AppState {
     search: string | null;
