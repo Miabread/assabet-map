@@ -1,7 +1,6 @@
-import { List, Space } from '@mantine/core';
+import { List } from '@mantine/core';
 import { ReactElement } from 'react';
-
-export const PBreak = () => <Space h="md" />;
+import { PBreak } from './components/PBreak';
 
 const bullets = (items: string) => (
     <List>

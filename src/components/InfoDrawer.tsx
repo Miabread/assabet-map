@@ -2,7 +2,8 @@ import { Drawer, ScrollArea, Title } from '@mantine/core';
 import { useDocumentTitle } from '@mantine/hooks';
 import { FC } from 'react';
 import { useAppState } from '../AppState';
-import { descriptions, PBreak } from '../descriptions';
+import { descriptions } from '../descriptions';
+import { PBreak } from './PBreak';
 
 export const InfoDrawer: FC = () => {
     const [{ drawer }, { closeDrawer }] = useAppState();
