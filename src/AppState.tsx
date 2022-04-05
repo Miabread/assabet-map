@@ -1,12 +1,13 @@
+import { LatLngTuple } from 'leaflet';
 import { createContext, FC, useContext } from 'react';
 import useMethods, { StateAndCallbacksFor } from 'use-methods';
-import { floors, places } from './map';
+import { places } from './map';
 
 interface AppState {
     selectedPlace: string | null;
     drawer: string | null;
     floor: string;
-    gotoPosition: string | null;
+    gotoPosition: LatLngTuple | null;
 }
 
 const initialState: AppState = {
@@ -22,7 +23,7 @@ const methods = (state: AppState) => ({
 
         state.selectedPlace = null;
         state.floor = places[value].floor;
-        state.gotoPosition = value;
+        state.gotoPosition = places[value].position;
     },
 
     closeDrawer() {

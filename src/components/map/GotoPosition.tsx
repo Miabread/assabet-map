@@ -9,7 +9,7 @@ export const GotoPosition: FC = () => {
 
     useEffect(() => {
         if (!gotoPosition) return;
-        map.setView(places[gotoPosition].position);
+        map.setView(gotoPosition);
         clearGotoPosition();
     }, [gotoPosition, map, clearGotoPosition]);
 
