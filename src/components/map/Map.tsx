@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { ImageOverlay, MapContainer } from 'react-leaflet';
 import { useAppState } from '../../AppState';
 import { floorBounds, floorCenter, floors } from '../../map';
-import { GotoSearchPos } from './GotoSearchPos';
+import { GotoPosition } from './GotoPosition';
 import { DebugMarker, Markers } from './Markers';
 
 export const Map: FC = () => {
@@ -27,7 +27,7 @@ export const Map: FC = () => {
             <ImageOverlay url={floors[floor]} bounds={floorBounds} />
             <Markers />
             <DebugMarker />
-            <GotoSearchPos />
+            <GotoPosition />
         </MapContainer>
     );
 };

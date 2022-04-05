@@ -6,20 +6,23 @@ interface AppState {
     search: string | null;
     drawer: string | null;
     floor: string;
+    gotoPosition: string | null;
 }
 
 const initialState: AppState = {
     search: null,
     drawer: null,
     floor: 'Floor 1',
+    gotoPosition: null,
 };
 
 const methods = (state: AppState) => ({
     onSearchSelect(value: string | null) {
-        state.search = value;
-
         if (!value) return;
+
+        state.search = null;
         state.floor = places[value].floor;
+        state.gotoPosition = value;
     },
 
     closeDrawer() {
@@ -32,6 +35,10 @@ const methods = (state: AppState) => ({
 
     clickMarker(place: string) {
         state.drawer = place;
+    },
+
+    clearGotoPosition() {
+        state.gotoPosition = null;
     },
 });
 
