@@ -24,7 +24,10 @@ export const InfoDrawer: FC = () => {
                 <PBreak />
                 <AspectRatio ratio={16 / 9}>
                     <iframe
-                        src={places[drawer!]?.video}
+                        src={
+                            'https://player.vimeo.com/video/' +
+                            places[drawer!]?.video
+                        }
                         frameBorder="0"
                         allow="fullscreen"
                         allowFullScreen
